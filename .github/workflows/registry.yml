@@ -1,0 +1,20 @@
+name: Publish Docker
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master 
+      - uses: elgohr/Publish-Docker-Github-Action@3.04
+        name: Build latest version and publish to GitHub Registry
+        with:
+          name: mileschou/hexo
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
