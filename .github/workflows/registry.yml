@@ -10,8 +10,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master 
-      - uses: elgohr/Publish-Docker-Github-Action@3.04
+      - uses: actions/checkout@v3
+      - uses: elgohr/Publish-Docker-Github-Action@v5
         name: Build latest version and publish to GitHub Registry
         with:
           name: mileschou/hexo

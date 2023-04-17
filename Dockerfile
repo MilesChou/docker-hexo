@@ -1,4 +1,4 @@
-FROM node:16-slim
+FROM node:18-slim
 
 LABEL "repository"="https://github.com/MilesChou/docker-hexo"
 LABEL "homepage"="https://mileschou.github.io/"
